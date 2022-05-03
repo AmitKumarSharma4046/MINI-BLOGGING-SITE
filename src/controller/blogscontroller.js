@@ -28,8 +28,7 @@ const createBlogs = async (req, res) => {
     try {
         // 👇 get all data from body here 🤯
         const requestBody = req.body;
-        //authorId will automatically be taken from decodedToken.authorId
-        requestBody.authorId = req.decodedToken.authorId
+
 
         if (!isValidRequestBody(requestBody)) {
             return res.status(400).send({ status: false, msg: "Invalid request parameters.Please provide blog details" })
@@ -42,6 +41,8 @@ const createBlogs = async (req, res) => {
         if (!isValid(requestBody.body)) {
             return res.status(400).send({ status: false, msg: "Body is required" })
         }
+        //authorId will automatically be taken from decodedToken.authorId
+        requestBody.authorId = req.decodedToken.authorId
         // if (!isValid(requestBody.authorId)) {
         //     return res.status(400).send({ status: false, msg: "authorId is required" })
         // }

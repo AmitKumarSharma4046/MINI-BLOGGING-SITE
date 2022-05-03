@@ -26,7 +26,7 @@ const authorization = async (req, res, next) => {
         let blogId = req.params.blogId
         let data=req.query
         if(Object.keys(data).length===0){
-            if(!blogId)return res.status(400).send({status:false,msg:"Put conditions in query"})
+            if(!blogId)return res.status(400).send({status:false,msg:"No query params received.Delete operation will be aborted"})
             authorId=await blogsModule.findOne({_id:blogId}).select({authorId:1,_id:0})
         }else{
             authorId=await blogsModule.findOne(data).select({authorId:1,_id:0})

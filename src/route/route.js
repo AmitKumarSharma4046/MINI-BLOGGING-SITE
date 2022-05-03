@@ -1,5 +1,4 @@
 const express = require('express');
-//const {route} = require('express/lib/application');
 const router = express.Router();
 
 const authorController = require("../controller/authorControllers")
@@ -26,9 +25,6 @@ router.delete("/blogs/:blogId", authentication, authorization, blogsController.d
 
 // delete by query
 router.delete("/blogs", authentication, authorization, blogsController.deleteBlogsByQuery)
-
-
-
 
 
 
