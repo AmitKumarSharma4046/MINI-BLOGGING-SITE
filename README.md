@@ -1,3 +1,4 @@
 # MINI-BLOGGING-SITE
-PERSONAL
+
+
 switch to branch PROJECT-1
