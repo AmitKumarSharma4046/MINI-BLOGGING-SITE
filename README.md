@@ -1,12 +1,3 @@
-# Blogging-Site-Mini-Project
-Dolly Show, Amit Kumar Sharma, Dhiraj Patil , Shail kumar Sahoo
-
-
-
-
-
-
-
 ## Blogging Site Mini Project Requirement
 
 ## Phase I
